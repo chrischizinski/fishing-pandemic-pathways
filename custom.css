@@ -1,0 +1,16 @@
+.footnote {
+  position: absolute;
+  bottom: 20px;
+  padding-right: 8em;
+  font-size: 0.5em;
+}
+
+h1, h2, h3 {
+  font-family: var(--header-font-family), var(--header-font-family-fallback);
+  font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: var(--header-color);
+}
+
+
