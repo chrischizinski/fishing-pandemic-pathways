@@ -30,9 +30,30 @@ library(tidyverse)
 library(ggtext)
 library(sf)
 library(xaringanthemer)
+library(metathis)
 
 
 ```
+
+```{r meta, echo=FALSE}
+meta() %>%
+  meta_general(
+    description = "The Covid-19 pandemic and fishing in Nebraska.",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "chrischizinski/fishing-pandemic-pathways") %>% 
+  meta_social(
+    title = "Fishing through the Pandemic in Nebraska",
+    url = "https://chrischizinski.github.io/fishing-pandemic-pathways/",
+    image = "https://chrischizinski.github.io/fishing-pandemic-pathways/img/share-card.png",
+    image_alt = "The title slide of the presentation).",
+    og_type = "website",
+    og_author = "Christopher Chizinski",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@chrischizinski"
+  )
+```
+
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 
@@ -414,11 +435,25 @@ rec_budget_plot
 ---
 class: center, middle
 
+```{r qr_gend, eval = FALSE}
+
+
+QRcode <- qrcode::qr_code('https://github.com/chrischizinski/fishing-pandemic-pathways')
+
+png(file="figs/gitqrcode.png",
+width=600, height=600)
+plot(QRcode)
+dev.off()
+```
+<img src="figs/gitqrcode.png" alt="qr" width ="20%" class="center"/> 
+<br>
+<br>
+<br>
 This research was supported by several Federal Aid in Sport Fish and Wildlife Restoration projects, which were administered by the Nebraska Game and Parks Commission.
 
 <br>
 <br>
 <br>
-.red[cchizinski2@unl.edu] | .red[humandimensions.unl.edu]
+[.red[cchizinski2[at]unl.edu]](mailto:cchizinski2@unl.edu) | [.red[humandimensions.unl.edu]](https://humandimensions.unl.edu/)
 
 
